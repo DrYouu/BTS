@@ -1,16 +1,17 @@
-📄 FAQ.md
-Is this scientifically accurate?
+# Preguntas frecuentes
 
-Yes. It avoids discrete approximations where the underlying phenomenon is continuous.
+¿Es esto compatible con calendarios civiles?
 
-Can this replace civil time?
+Sí. BTS está diseñado para coexistir: todas las conversiones se realizan respecto a una fecha origen conocida.
 
-No. It is designed to coexist via conversion.
+¿Puedo usar cualquier fecha de origen?
 
-Why blocks of 10 days?
+Sí. Recomendamos documentar la fecha origen en metadatos cuando compartas datos BTS.
 
-Because they are regular, decimal, and cognitively manageable.
+¿Por qué 10 días?
 
-Why no years?
+Porque permite agrupación decimal, conserva regularidad y facilita recordar patrones interiores del bloque.
 
-Because years are not discrete physical units.
+¿Sirve para sincronización entre personas?
+
+Sí, si todos comparten la misma fecha origen; en caso contrario, BTS sirve mejor para uso personal y organización individual.

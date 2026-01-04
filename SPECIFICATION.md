@@ -1,50 +1,34 @@
-SPECIFICATION.md (documento técnico)
-1. Origin (epoch)
+# Especificación técnica
 
-Day D0 is defined as the day of birth.
+1. Origen (epoch)
 
-All counters are 0-based.
+- El día D0 es la fecha origen definida por el usuario (p. ej. fecha de nacimiento).
+- Contadores 0-based.
 
-2. Atomic unit
+2. Unidad atómica
 
-One day = 24 hours
+- 1 día = 24 horas (usar UTC para conversión canónica).
 
-Internal timekeeping may use standard hours/minutes/seconds for compatibility
+3. Jerarquía decimal
 
-3. Decimal hierarchy
-Symbol	Name	Size	Description
-d	day-in-block	1 day	0–9
-B	block	10 days	primary unit
-H	hectablock	100 days	optional
-K	kiloblock	1000 days	optional
-4. Canonical absolute counter
+- d: día dentro del bloque (0–9)
+- B: bloque (10 días)
+- H: hectablock (100 días, opcional)
+- K: kiloblock (1000 días, opcional)
 
-Let:
+4. Cálculos canónicos
 
-D = total days since origin
-
-Then:
+D = días totales desde el origen
 
 K = floor(D / 1000)
 H = floor((D % 1000) / 100)
 B = floor((D % 100) / 10)
 d = D % 10
 
-5. Primary human-readable format
-B,d
+Formato humano principal: `B,d` (ej.: `1325,3`)
+Formato posicional completo: `K,H,B,d` (ej.: `13,2,5,3`)
 
+5. Reglas
 
-Example:
-
-1325,3
-
-6. Full positional format
-K,H,B,d
-
-
-Example:
-
-13,2,5,3
-
-
-This is true decimal positional notation.
+- Todas las conversiones deben usar UTC medianoche para evitar ambigüedades de huso.
+- La implementación de referencia debe documentar la elección de origen y permitir usar fechas locales para visualización.

@@ -1,41 +1,15 @@
-📄 PHILOSOPHY.md (fundamentos)
-Why years are discarded
+# Filosofía del sistema
 
-The Earth’s orbit is continuous and does not consist of an integer number of days.
-Years are therefore not discrete units, but accounting approximations.
+Razonamiento
 
-Any system that treats years as exact containers of days must introduce corrections (leap years), which are not physical phenomena, but bookkeeping devices.
+Los modelos de tiempo tradicionales (años, meses, semanas) son en gran parte convenciones culturales y soluciones de contabilidad para la rotación de la Tierra y su órbita. Para un sistema personal de organización, estas convenciones introducen irregularidades que dificultan la planificación y la formación de hábitos.
 
-For a personal time system:
+Principios
 
-years are unnecessary
+- Simplicidad: partir de la unidad diaria y agrupar en bloques uniformes.
+- Regularidad: todos los bloques tienen la misma longitud (10 días).
+- Posicionalidad: usar notación decimal para facilitar la comprensión y la aritmética.
 
-years are misleading
+Uso práctico
 
-years break positional notation
-
-Therefore, this system does not use years as a unit.
-
-Why decimal
-
-Decimal grouping offers:
-
-predictability
-
-mental arithmetic
-
-regular habit cycles
-
-positional notation
-
-Blocks of 10 days are short enough to feel natural, and long enough to structure routines.
-
-Bottom-up construction
-
-Traditional calendars are built top-down:
-
-“We have a year, let’s divide it.”
-
-This system is built bottom-up:
-
-“We have days; how should we group them optimally?”
+Los bloques de 10 días han demostrado ser un periodo útil: suficientemente cortos para ciclos de revisión y suficientemente largos para observar progreso real en tareas y hábitos.

@@ -1,19 +1,11 @@
-README.md
+# Herramientas (carpeta tools)
 
-This directory will contain:
+Esta carpeta contiene planeamientos y herramientas auxiliares para trabajar con BTS.
 
-calendar generators
+Contenido previsto:
 
-CLI tools
+- Generadores de calendarios (p. ej. script para producir `CALENDAR_YYYY.md` y `.ics`)
+- Utilidades CLI para convertir fechas entre Gregorian y BTS
+- Widgets y visualizaciones para escritorio
 
-Linux desktop widgets
-
-visualizations
-
-Planned languages:
-
-Python
-
-Bash
-
-JavaScript
+Lenguajes previstos: Python, Bash, JavaScript

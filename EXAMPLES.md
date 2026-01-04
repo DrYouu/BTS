@@ -1,19 +1,20 @@
-EXAMPLES.md (ejemplos claros)
-Example 1
+# Ejemplos prácticos
 
-Gregorian:
+Ejemplo 1 — Conversión (referencia del repositorio)
 
-2026-01-04
+- Fecha civil: 2026-01-04
+- Notación BTS (ejemplo del repositorio): `B1325,3`
 
+Ejemplo 2 — Planificación de hábitos
 
-Block calendar:
+- Días de entrenamiento: d2–d6 (dentro de cada bloque)
+- Días de descanso: d8–d9
+- Revisión: d0
 
-B1325,3
+Ejemplo 3 — Indexación a largo plazo
 
-Example 2 (habit tracking)
-Workout days: d2–d6
-Rest days: d8–d9
-Review day: d0
+- Evento importante: `K13,H2` (representa un contador posicional más grande)
 
-Example 3 (long-term indexing)
-Major life change: K13,H2
+Ejemplo 4 — Calendario de muestra
+
+Consultar `CALENDAR_2026.md` para ver los inicios de bloque durante 2026 y ejemplos de cómo se mapean fechas civiles a bloques.

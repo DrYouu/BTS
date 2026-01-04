@@ -1,66 +1,52 @@
-📄 README.md (entrada principal)
-Personal Decimal Block Calendar
+# Sistema de Tiempo en Bloques (BTS)
 
-This repository documents a personal, deterministic, decimal-based time indexing system designed to replace traditional calendars (weeks, months, years) for personal organization, habit tracking, and life indexing.
+Presentación
 
-The system is:
+BTS (Block Time System) es un sistema personal y determinista de indexación del tiempo basado en bloques decimales de 10 días. Está diseñado para organización personal, seguimiento de hábitos y archivo de eventos a largo plazo. Esta versión en castellano es la principal; las fuentes en inglés se han movido a `legacy/english/`.
 
-based on days as atomic units
+Objetivos
 
-purely decimal (base 10)
+- Proveer una forma regular y decimal de agrupar días.
+- Eliminar dependencias de años, meses irregulares y semanas arbitrarias.
+- Facilitar la planificación y el seguimiento mediante notación posicional.
 
-regular and uniform
+Ventajas frente a calendarios tradicionales
 
-independent from civil calendars, leap years, and cultural conventions
+- Regularidad completa: bloques de 10 días uniformes.
+- Notación decimal compatible con aritmética mental.
+- Fácil indexación a largo plazo sin ajustes por años bisiestos.
+- Conversiones posibles hacia/desde calendarios civiles cuando se necesita interoperabilidad.
 
-compatible with existing systems via conversion
+Idea central
 
-This is not a proposal to replace civil time globally.
-It is a personal time model, designed to align better with cognition, habits, and long-term personal development.
+- Unidad atómica: el día (24 h).
+- Bloque (B): 10 días.
+- Notación principal: `B,d` (por ejemplo, `B1325,3`).
+- Origen (epoch) personal: el día 0 se define por el usuario (p. ej. fecha de nacimiento).
 
-Core idea (TL;DR)
+Guía rápida (Quickstart)
 
-Time is continuous.
+1. Define tu origen (fecha base).
+2. Para convertir una fecha civil a BTS:
+   - Convierte la fecha civil a UTC medianoche.
+   - Calcula días transcurridos D desde el origen.
+   - Calcula B = floor(D/10) y d = D % 10.
+3. Para convertir de BTS a civil:
+   - D = 10·B + d
+   - Suma D días al origen y muestra la fecha civil.
 
-Days are counted from a personal origin (birth).
+Documentación incluida
 
-Days are grouped into blocks of 10 days.
+- `PHILOSOPHY.md` — Fundamentos y razones del diseño.
+- `SPECIFICATION.md` — Especificación técnica y formatos.
+- `CONVERSION.md` — Métodos de conversión y notas de interoperabilidad.
+- `EXAMPLES.md` — Ejemplos de uso y casos prácticos.
+- `FAQ.md` — Preguntas frecuentes.
+- `CALENDAR_2026.md` — Calendario de muestra para 2026.
+- `CALENDAR_2026.ics` — Archivo iCalendar con los inicios de bloque para 2026.
 
-Larger structures are built bottom-up, not by dividing years.
+Contacto
 
-There are no months, weeks, or years as structural units.
+Repositorio: https://github.com/DrYouu/BTS
 
-Example date:
-
-B1325,3
-
-
-Meaning:
-
-Block 1325 since origin
-
-Day 3 within that block
-
-Why this exists
-
-Traditional calendars suffer from:
-
-irregular months
-
-arbitrary week lengths
-
-leap years as accounting patches
-
-poor alignment with habits and routines
-
-poor numeric intuition
-
-This system removes all of that.
-
-Status
-
-Specification: stable (v1.0)
-
-Reference implementation: planned
-
-Linux tools: planned
+Contribuciones y mejoras: las instrucciones básicas se encuentran en `legacy/english/` para referencia en inglés. Esta rama principal y los archivos en castellano constituyen el núcleo visible.
